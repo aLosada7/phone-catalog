@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@phone-catalog/core": ["libs/core/src/index.ts"]
+      "@phone-catalog/core": ["libs/core/src/index.ts"],
+      "@phone-catalog/core-data/*": ["libs/core/data/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
