@@ -2,7 +2,7 @@ import { UIView } from '@uirouter/react';
 
 import { Row, Title, Icon } from '@edene/components';
 
-import { Breadcrumb } from '../../../../shared/components/breadcrumb/Breadcrumb';
+import { Breadcrumb } from '../../../../../shared/components/breadcrumb/Breadcrumb';
 
 export const PhoneCockpitMainPage = () => {
   return (

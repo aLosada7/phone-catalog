@@ -1,4 +1,5 @@
 import { UIView } from '@uirouter/react';
+import { PhoneCockpitAddPage } from '../../modules/cockpit/phoneCockpitAddPage/PhoneCockpitAddPage';
 import { PhoneCockpitListPage } from '../../modules/cockpit/phoneCockpitListPage/PhoneCockpitListPage';
 
 import { PhoneCockpitMainPage } from '../../modules/cockpit/phoneCockpitMainPage/PhoneCockpitMainPage';
@@ -12,6 +13,11 @@ const cockpitStates = [
     redirectTo: 'app.phone.cockpit.list',
   },
   { name: 'app.phone.cockpit.list', url: '', component: PhoneCockpitListPage },
+  {
+    name: 'app.phone.cockpit.add',
+    url: '/add',
+    component: PhoneCockpitAddPage,
+  },
 ];
 
 export const states = [

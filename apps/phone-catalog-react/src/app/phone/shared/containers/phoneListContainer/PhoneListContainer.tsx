@@ -15,7 +15,7 @@ export const PhoneListContainer = ({
 }: IPhoneListContainerProps) => {
   const { list, total, loading, error } = usePhoneList();
 
-  const uiSref = useSref('app.phone.add');
+  const uiSref = useSref('app.phone.cockpit.add');
 
   if (list?.length === 0 && loading) {
     return <div>Loading</div>;
@@ -29,7 +29,7 @@ export const PhoneListContainer = ({
     <Container>
       <Row align="space-between-center">
         <Text>Total elements found: {total}</Text>
-        <Button component="a" {...uiSref}>
+        <Button component="a" iconLeft="add" {...uiSref}>
           Add
         </Button>
       </Row>

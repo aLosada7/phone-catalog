@@ -24,7 +24,7 @@ describe('test suit for phone create hook', () => {
     const newPhone = await result.current.createPhone(INITIAL_PHONE);
 
     // Expectations
-    expect(newPhone).toEqual({ ...INITIAL_PHONE, id: '1' });
+    expect(newPhone).toEqual({ ...INITIAL_PHONE, id: 1 });
     expect(PhoneService.create).toBeCalledTimes(1);
     expect(PhoneService.create).toBeCalledWith(INITIAL_PHONE);
   });
