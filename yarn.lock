@@ -1064,17 +1064,17 @@
     debug "^4.3.2"
     lodash "^4.17.20"
 
-"@edene/components@^0.0.6":
+"@edene/components@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@edene/components/-/components-0.0.6.tgz#21295332c8473b4b54f81072ac1b4f8a18cad79f"
   integrity sha512-V35HewI4EriDGIeTwoCdlJNEQMXOVumqlPqWYM4VhlmW9laydWT1ES4F44A9HPSeAeqEj9mj8hSgnDbtAYNVKA==
 
-"@edene/foundations@^0.0.4":
+"@edene/foundations@0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@edene/foundations/-/foundations-0.0.4.tgz#0f1e1d80f4a40b777ea98ff7c939c6714a50118a"
   integrity sha512-fnZ7eFSCMPj63Ssa231weyYMvkgDXUBNZYmHLaMOyCTA3yEvAQzaTYuCcfh5+NNwPp+pPbnmscTOFhbmZZZqug==
 
-"@edene/hooks@^0.0.1":
+"@edene/hooks@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@edene/hooks/-/hooks-0.0.1.tgz#29709782921986e5c131b6fe22acb862d1879bce"
   integrity sha512-y7lqfwbSLsNxU8DRQ8hAzyZtDc24JOlx9MeNFWCsoxUVHOB/EEbh6KhTqtlPOqwqzkdXgAgeHnOyH/RlvjrcFA==
@@ -1665,7 +1665,7 @@
     webpack-merge "^5.8.0"
     webpack-node-externals "^3.0.0"
 
-"@nrwl/react@^14.5.10":
+"@nrwl/react@14.5.10":
   version "14.5.10"
   resolved "https://registry.yarnpkg.com/@nrwl/react/-/react-14.5.10.tgz#b1f43b45d752ad0e40e19802f65d3b1ddc81e21a"
   integrity sha512-cdMWs9BKu1mkKg+/UisOSxAIxD13kbKY565+mqIRKzsdN8LvP7Xe6iDCfGtIpg1esrZxVZbcMm38L3rn6x+4hQ==
@@ -2064,7 +2064,7 @@
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.5":
+"@testing-library/jest-dom@5.16.5":
   version "5.16.5"
   resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.16.5.tgz#3912846af19a29b2dbf32a6ae9c31ef52580074e"
   integrity sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==
@@ -2079,7 +2079,7 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react-hooks@^8.0.1":
+"@testing-library/react-hooks@8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-8.0.1.tgz#0924bbd5b55e0c0c0502d1754657ada66947ca12"
   integrity sha512-Aqhl2IVmLt8IovEVarNDFuJDVWVvhnr9/GCU6UUnrYXwgDFF9h2L2o2P9KBni1AST5sT6riAyoukFLyjQUgD/g==
@@ -2087,7 +2087,7 @@
     "@babel/runtime" "^7.12.5"
     react-error-boundary "^3.1.0"
 
-"@testing-library/react@^13.3.0":
+"@testing-library/react@13.3.0":
   version "13.3.0"
   resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-13.3.0.tgz#bf298bfbc5589326bbcc8052b211f3bb097a97c5"
   integrity sha512-DB79aA426+deFgGSjnf5grczDPiL4taK3hFaa+M5q7q20Kcve9eQottOG5kZ74KEr55v0tU2CQormSSDK87zYQ==
@@ -3617,6 +3617,11 @@ core-js-pure@^3.20.2, core-js-pure@^3.8.1:
   version "3.25.0"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.25.0.tgz#f8d1f176ff29abbfeb610110de891d5ae5a361d4"
   integrity sha512-IeHpLwk3uoci37yoI2Laty59+YqH9x5uR65/yiA0ARAJrTrN4YU0rmauLWfvqOuk77SlNJXj2rM6oT/dBD87+A==
+
+core-js@3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-js@^3.6.5:
   version "3.25.0"
@@ -8247,7 +8252,7 @@ svgo@^2.7.0, svgo@^2.8.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-swr@^1.3.0:
+swr@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
   integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
