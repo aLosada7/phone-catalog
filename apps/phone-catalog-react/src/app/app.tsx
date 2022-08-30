@@ -4,6 +4,7 @@ import {
   pushStateLocationPlugin,
   UIRouterReact,
 } from '@uirouter/react';
+
 import { states } from './phone/shared/utils/PhoneRoutes';
 
 const config = (router: unknown) => {

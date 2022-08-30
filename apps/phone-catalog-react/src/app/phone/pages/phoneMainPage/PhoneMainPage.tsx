@@ -1,17 +1,17 @@
 import { UIView } from '@uirouter/react';
+import { css } from '@emotion/react';
 
-import { Text, Icon } from '@edene/components';
+import { Container } from '@edene/components';
+
+const container = css`
+  margin: 2rem;
+  background-color: rgb(252, 252, 252);
+`;
 
 export const PhoneMainPage = () => {
   return (
-    <div>
-      <Text>
-        <Icon size="large" variant="outlined">
-          waving_hand
-        </Icon>{' '}
-        Welcome to Phone Catalog React
-      </Text>
+    <Container cssOverrides={container}>
       <UIView />
-    </div>
+    </Container>
   );
 };
