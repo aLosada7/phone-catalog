@@ -1,15 +1,15 @@
-import styled from '@emotion/styled';
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { Text, Icon } from '@edene/components';
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="phone-catalog-react" />
-    </StyledApp>
+    <>
+      <Text>
+        <Icon size="large" variant="outlined">
+          waving_hand
+        </Icon>{' '}
+        Welcome to Phone Catalog React
+      </Text>
+    </>
   );
 }
 
