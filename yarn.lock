@@ -2582,6 +2582,20 @@
     "@typescript-eslint/types" "5.35.1"
     eslint-visitor-keys "^3.3.0"
 
+"@uirouter/core@6.0.7":
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.7.tgz#a66743dceb13a56d8908474ff891d63e5d5a2b01"
+  integrity sha512-KUTJxL+6q0PiBnFx4/Z+Hsyg0pSGiaW5yZQeJmUxknecjpTbnXkLU8H2EqRn9N2B+qDRa7Jg8RcgeNDPY72O1w==
+
+"@uirouter/react@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@uirouter/react/-/react-1.0.7.tgz#2ddc3996a011b77f4579a72eebfb3243bf04c909"
+  integrity sha512-CRCEk6fh/Fy/iAUkctPWpgrEC4DR1D/hnrpqyGshDcAuCfRVSYluRPkurzV74p1LG1pksCVlThH/0aJK9+G/MQ==
+  dependencies:
+    "@uirouter/core" "6.0.7"
+    classnames "^2.3.1"
+    prop-types "^15.6.1"
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
@@ -3415,6 +3429,11 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
+
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 cli-cursor@3.1.0:
   version "3.1.0"
@@ -7277,7 +7296,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.1, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
