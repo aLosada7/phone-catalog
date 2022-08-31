@@ -1,3 +1,4 @@
+import { EdeneTheme } from '@edene/foundations';
 import {
   UIRouter,
   UIView,
@@ -7,6 +8,7 @@ import {
 import axios from 'axios';
 
 import { states } from './phone/shared/utils/PhoneRoutes';
+import { Settings } from './shared/components/settings';
 
 axios.defaults.baseURL = 'http://localhost:3333';
 
@@ -16,13 +18,16 @@ const config = (router: unknown) => {
 
 export function App() {
   return (
-    <UIRouter
-      plugins={[pushStateLocationPlugin]}
-      states={states}
-      config={config}
-    >
-      <UIView />
-    </UIRouter>
+    <EdeneTheme>
+      <UIRouter
+        plugins={[pushStateLocationPlugin]}
+        states={states}
+        config={config}
+      >
+        <Settings />
+        <UIView />
+      </UIRouter>
+    </EdeneTheme>
   );
 }
 
