@@ -1064,10 +1064,10 @@
     debug "^4.3.2"
     lodash "^4.17.20"
 
-"@edene/components@0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@edene/components/-/components-0.0.6.tgz#21295332c8473b4b54f81072ac1b4f8a18cad79f"
-  integrity sha512-V35HewI4EriDGIeTwoCdlJNEQMXOVumqlPqWYM4VhlmW9laydWT1ES4F44A9HPSeAeqEj9mj8hSgnDbtAYNVKA==
+"@edene/components@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@edene/components/-/components-0.0.8.tgz#d666dce57f50e94689dbafb05b3462c8cbc95c5c"
+  integrity sha512-uLpWOt5ahF9rJNdeAgbu1V008ksxpJetIQP7AOYcPfKUYqjexnXpFQGHxjd+j2W20OJlSfxQhwmncVSs0sMPHA==
 
 "@edene/foundations@0.0.4":
   version "0.0.4"

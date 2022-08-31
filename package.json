@@ -9,7 +9,7 @@
   },
   "private": true,
   "dependencies": {
-    "@edene/components": "0.0.6",
+    "@edene/components": "^0.0.8",
     "@edene/foundations": "0.0.4",
     "@edene/hooks": "0.0.1",
     "@emotion/react": "11.10.0",
