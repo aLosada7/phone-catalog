@@ -1,0 +1,17 @@
+name: 'Core CI'
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: ✅ Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: 🧰 Install dependencies
+        run: yarn
+
+      - name: ✅ Run tests
+        run: npx nx run core:test
