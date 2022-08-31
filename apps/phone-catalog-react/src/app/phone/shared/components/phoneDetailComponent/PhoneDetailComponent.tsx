@@ -11,7 +11,7 @@ export const PhoneDetailComponent = ({ phone }: IPhoneDetailComponentProps) => {
     <Row direction="column" align="start-center">
       <Image
         size="d"
-        src="https://images.pexels.com/photos/5370674/pexels-photo-5370674.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        src={`http://localhost:3333/${phone.imageFileName}`}
         alt="Phone image"
       ></Image>
       <Text size="lg" weight="bolder" color={grays[1]}>

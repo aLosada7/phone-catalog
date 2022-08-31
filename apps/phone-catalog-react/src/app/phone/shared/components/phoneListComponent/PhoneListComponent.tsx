@@ -35,7 +35,7 @@ const PhoneTableRow = ({ phone, RowComponent }: IPhoneTableRowProps) => {
     <Col md={12}>
       <Card>
         <CardMedia
-          src="http://angular-material.fusetheme.com/assets/images/ui/angular-material/scenes/autocomplete.scene.png"
+          src={`http://localhost:3333/${phone.imageFileName}`}
           alt="Image Example"
         ></CardMedia>
         <CardSection borderBottom>
