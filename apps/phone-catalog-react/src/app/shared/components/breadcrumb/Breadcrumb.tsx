@@ -16,9 +16,12 @@ const BreadcrumbItem = ({ state, params }: BreadcrumbProps) => {
   const linkText = uiSref.href?.split('/').pop();
   if (!state.url.pattern || !linkText) return null;
   return (
-    <EdenebreadcrumbItem {...uiSref}>{`${linkText
-      .charAt(0)
-      .toUpperCase()}${linkText.slice(1)}`}</EdenebreadcrumbItem>
+    <EdenebreadcrumbItem
+      active={linkText === window.location.href?.split('/').pop()}
+      {...uiSref}
+    >{`${linkText.charAt(0).toUpperCase()}${linkText.slice(
+      1
+    )}`}</EdenebreadcrumbItem>
   );
 };
 
@@ -33,7 +36,7 @@ export const Breadcrumb = () => {
 
   return (
     <EdeneBreadcrumb>
-      {states.map((state) => (
+      {states.map((state, index) => (
         <BreadcrumbItem key={state.name} state={state} params={params} />
       ))}
     </EdeneBreadcrumb>
