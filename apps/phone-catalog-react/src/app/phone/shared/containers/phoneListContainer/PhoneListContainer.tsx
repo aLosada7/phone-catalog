@@ -5,20 +5,19 @@ import { Alert, Button, Container, Row, Text } from '@edene/components';
 import { usePhoneList } from '../../hooks/usePhoneList';
 import { PhoneListComponent } from '../../components/phoneListComponent';
 import { useSref } from '@uirouter/react';
+import { Loader } from '../../../../shared/components/loader';
 
 export interface IPhoneListContainerProps {
   RowComponent?: ReactElement;
 }
 
-export const PhoneListContainer = ({
-  RowComponent,
-}: IPhoneListContainerProps) => {
+export const PhoneListContainer = (props: IPhoneListContainerProps) => {
   const { list, total, loading, error } = usePhoneList();
 
   const uiSref = useSref('app.phone.cockpit.add');
 
   if (list?.length === 0 && loading) {
-    return <div>Loading</div>;
+    return <Loader />;
   }
 
   if (!list || error) {
@@ -33,10 +32,7 @@ export const PhoneListContainer = ({
           Add
         </Button>
       </Row>
-      <PhoneListComponent
-        list={list}
-        RowComponent={RowComponent}
-      ></PhoneListComponent>
+      <PhoneListComponent list={list} {...props}></PhoneListComponent>
     </Container>
   );
 };

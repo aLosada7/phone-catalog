@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, cloneElement } from 'react';
 
 import { IPhone } from '@phone-catalog/core';
 import {
@@ -30,7 +30,7 @@ interface IPhoneTableRowProps extends Omit<IPhoneListComponentProps, 'list'> {
   phone: IPhone;
 }
 
-const PhoneTableRow = ({ phone, ...props }: IPhoneTableRowProps) => {
+const PhoneTableRow = ({ phone, RowComponent }: IPhoneTableRowProps) => {
   return (
     <Col md={12}>
       <Card>
@@ -48,9 +48,6 @@ const PhoneTableRow = ({ phone, ...props }: IPhoneTableRowProps) => {
             {phone.name} . {phone.manufacturer}
           </Text>
           <Text size="xxlg">${phone.price}</Text>
-          <Text size="sm" color={grays[3]}>
-            {phone.description}
-          </Text>
         </CardSection>
         <CardSection borderBottom>
           <Row>
@@ -69,23 +66,12 @@ const PhoneTableRow = ({ phone, ...props }: IPhoneTableRowProps) => {
             </Col>
           </Row>
         </CardSection>
-        {/* {props.RowComponent && cloneElement(props.RowComponent, { phone: item })} */}
+        {(RowComponent as ReactElement) &&
+          cloneElement(RowComponent as ReactElement, { phone })}
       </Card>
     </Col>
   );
 };
-
-{
-  /* <Button
-            size="block"
-            iconRight="keyboard_arrow_right"
-            cssOverrides={transformUppercase}
-        >
-            <Text size="xsm" weight="bold">
-                Schedule Showing
-            </Text>
-        </Button> */
-}
 
 export const PhoneListComponent = ({
   list,

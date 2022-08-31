@@ -1,71 +1,117 @@
-import { css } from '@emotion/react';
-
 import {
   Button,
   Col,
   Form,
   Row,
+  Group,
   Textarea,
   TextInput,
   Title,
 } from '@edene/components';
 import { IPhone } from '@phone-catalog/core';
 
-const vStack = css`
-  > * {
-    margin-left: 1rem;
-  }
-`;
+import { usePhoneForm } from '../../hooks/usePhoneForm';
 
 interface IPhoneFormComponentProps {
-  onSuccess: (phone: IPhone) => void;
+  phone?: IPhone;
+  onSubmit: (phone: IPhone) => void;
   onCancel: () => void;
 }
 
 export const PhoneFormComponent = (props: IPhoneFormComponentProps) => {
+  const { formData, onChange, onSubmit } = usePhoneForm(
+    props.onSubmit,
+    props.phone
+  );
+
   return (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <Title mt={4}>Main data</Title>
       <Row>
         <Col md={12}>
-          <TextInput label="Name" />
+          <TextInput
+            name="name"
+            label="Name"
+            value={formData.name}
+            onChange={onChange}
+          />
         </Col>
         <Col md={12}>
           {/** NumberInput component still not finished, so I am using TextInput to keep design */}
-          <TextInput label="Price" />
+          <TextInput
+            name="price"
+            label="Price"
+            value={formData.price}
+            onChange={onChange}
+          />
         </Col>
         <Col md={12}>
-          <TextInput label="Manufacturer" />
+          <TextInput
+            name="manufacturer"
+            label="Manufacturer"
+            value={formData.manufacturer}
+            onChange={onChange}
+          />
         </Col>
         <Col md={12}>
-          <TextInput label="Color" />
+          <TextInput
+            name="color"
+            label="Color"
+            value={formData.color}
+            onChange={onChange}
+          />
         </Col>
       </Row>
-      <Textarea label="Description"></Textarea>
+      <Textarea
+        name="description"
+        label="Description"
+        value={formData.description}
+        onChange={onChange}
+      ></Textarea>
       <Title mt={4}>Specifications</Title>
-      <TextInput label="Image" />
+      <TextInput
+        name="imageFileName"
+        label="Image"
+        value={formData.imageFileName}
+        onChange={onChange}
+      />
       <Row>
         <Col md={8}>
-          <TextInput label="Screen" />
+          <TextInput
+            name="screen"
+            label="Screen"
+            value={formData.screen}
+            onChange={onChange}
+          />
         </Col>
         <Col md={8}>
-          <TextInput label="Processor" />
+          <TextInput
+            name="processor"
+            label="Processor"
+            value={formData.processor}
+            onChange={onChange}
+          />
         </Col>
         <Col md={8}>
-          <TextInput label="RAM" />
+          <TextInput
+            name="ram"
+            label="RAM"
+            value={formData.ram}
+            onChange={onChange}
+          />
         </Col>
       </Row>
 
-      <Row align="space-between-center" py={2}>
+      <Row align="space-between-center" noGlutters>
         <Button iconLeft="arrow_back" variant="link" onClick={props.onCancel}>
           Back
         </Button>
-        <div css={vStack}>
+        <Group>
           <Button variant="outline" onClick={props.onCancel}>
             Cancel
           </Button>
-          <Button>Save</Button>
-        </div>
+          <Button type="submit">Save</Button>
+        </Group>
       </Row>
     </Form>
   );
