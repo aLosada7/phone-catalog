@@ -10,6 +10,7 @@ import {
   Title,
   Label,
   FormGroup,
+  Input,
 } from '@edene/components';
 import { IPhone } from '@phone-catalog/core';
 
@@ -42,13 +43,17 @@ export const PhoneFormComponent = (props: IPhoneFormComponentProps) => {
           />
         </Col>
         <Col md={12}>
-          {/** NumberInput component still not finished, so I am using TextInput to keep design */}
-          <TextInput
-            name="price"
-            label="Price"
-            value={formData.price}
-            onChange={onChange}
-          />
+          {/** NumberInput component still not finished, so I am using FormGroup & Input to keep design consistent */}
+          <FormGroup>
+            <Label text="Price ($)" />
+            <Input
+              type="number"
+              id="price"
+              name="price"
+              value={formData.price}
+              onChange={onChange}
+            />
+          </FormGroup>
         </Col>
         <Col md={12}>
           <TextInput
@@ -104,12 +109,17 @@ export const PhoneFormComponent = (props: IPhoneFormComponentProps) => {
           />
         </Col>
         <Col md={8}>
-          <TextInput
-            name="ram"
-            label="RAM"
-            value={formData.ram}
-            onChange={onChange}
-          />
+          {/** NumberInput component still not finished, so I am using FormGroup & Input to keep design consistent */}
+          <FormGroup>
+            <Label text="RAM (GB)" />
+            <Input
+              type="number"
+              id="ram"
+              name="ram"
+              value={formData.ram}
+              onChange={onChange}
+            />
+          </FormGroup>
         </Col>
       </Row>
 

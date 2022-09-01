@@ -2,29 +2,24 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 
 import { IPhone } from '@phone-catalog/core';
 
-interface IPhoneForm extends Omit<IPhone, 'price' | 'ram'> {
-  price: string;
-  ram: string;
-}
-
-const initialValues: IPhoneForm = {
+const initialValues: IPhone = {
   name: '',
   manufacturer: '',
   description: '',
   color: '',
-  price: '',
+  price: 0,
   imageFileName: '',
   screen: '',
   processor: '',
-  ram: '',
+  ram: 0,
 };
 
 export const usePhoneForm = (
   callback: (values: IPhone) => void,
   phone?: IPhone
 ) => {
-  const [formData, setFormData] = useState<IPhoneForm>(
-    (phone as unknown as IPhoneForm) || initialValues
+  const [formData, setFormData] = useState<IPhone>(
+    (phone as unknown as IPhone) || initialValues
   );
 
   const onChange = (
@@ -43,9 +38,6 @@ export const usePhoneForm = (
 
     const phone: IPhone = {
       ...formData,
-      // ensuring that number inputs are passed correctly
-      price: Number(formData.price),
-      ram: Number(formData.ram),
     };
 
     if (formData.imageToUpload instanceof File)
