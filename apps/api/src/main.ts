@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 
 import { addPhoneRoutes } from './app/phones';
+import { addFileRoutes } from './app/files';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get('/api', (req, res) => {
 });
 
 addPhoneRoutes(app);
+addFileRoutes(app);
 
 const port = 3333;
 const server = app.listen(port, () => {
