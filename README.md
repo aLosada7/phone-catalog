@@ -25,7 +25,7 @@ Although this is a small, I believe there are some concepts to be applied when w
 
 ### REST API: CRUD
 
-As you already know, I am not an expert in Node. What's why i have created Nx with the express preset. Apart from that I have created a basic CRUD which handles phone entities. I understand this part would need some refactoring in a future.
+As you already know, I am not an expert in Node. What's why i have created Nx with the express preset. Apart from that I have created a basic CRUD which handles phone entities. I understand this part would need some refactoring in a future. I would use a .env file for setting the _HOST_ & _PORT_ but that's an extra step I would like to avoid for this small project, so you have to use port 3333.
 
 ### React
 
