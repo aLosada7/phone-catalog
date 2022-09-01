@@ -5,6 +5,7 @@ export default {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
+  transformIgnorePatterns: ['/node_modules/(?!@edene)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/phone-catalog-react',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
