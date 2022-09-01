@@ -33,6 +33,11 @@ export const usePhoneForm = (
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const onChangeFile = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files)
+      setFormData({ ...formData, [event.target.name]: event.target.files[0] });
+  };
+
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -42,11 +47,16 @@ export const usePhoneForm = (
       price: Number(formData.price),
       ram: Number(formData.ram),
     };
+
+    if (formData.imageToUpload instanceof File)
+      phone.imageFileName = formData.imageToUpload.name;
+
     callback(phone);
   };
 
   return {
     onChange,
+    onChangeFile,
     onSubmit,
     formData,
   };
