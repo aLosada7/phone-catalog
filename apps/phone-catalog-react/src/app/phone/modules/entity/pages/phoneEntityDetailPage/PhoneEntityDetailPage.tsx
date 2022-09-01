@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
 
-import { Alert, Button, Col, Row, Group } from '@edene/components';
+import { Button, Col, Row, Group } from '@edene/components';
 
 import { PhoneDetailContainer } from '../../../../shared/containers/phoneDetailContainer';
 import { PhonePreformattedContainer } from '../../containers/phoneEntityPreformattedContainer/PhoneEntityPreformattedContainer';
@@ -26,7 +26,7 @@ export const PhoneEntityDetailPage = () => {
     setJudicialRecordInstanceId(Number(params['phoneId']));
   }, [params]);
 
-  if (!phoneId) return <Alert>Not found</Alert>;
+  if (!phoneId) return <></>;
 
   return (
     <Row noGlutters>
