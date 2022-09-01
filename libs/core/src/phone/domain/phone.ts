@@ -6,6 +6,7 @@ export interface IPhone {
   color: string;
   price: number;
   imageFileName: string;
+  imageToUpload?: File;
   screen: string;
   processor: string;
   ram: number;
