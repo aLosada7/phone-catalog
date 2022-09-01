@@ -1,7 +1,6 @@
 /* eslint-disable */
 export default {
   displayName: 'core',
-  testEnvironment: 'node',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
