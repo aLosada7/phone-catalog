@@ -12,7 +12,7 @@ const initialPhone: IPhone = {
   ...PHONE_SAMPLE_3,
 };
 
-describe('Phone CRUD Testing', () => {
+describe.skip('Phone CRUD Testing', () => {
   beforeAll(() => c2eSetup());
 
   const repo: IPhoneRepository = new PhoneHttpRepository();
