@@ -15,3 +15,15 @@ jobs:
 
       - name: ✅ Run tests
         run: npx nx run phone-catalog-react:test
+  lint:
+    name: ✅ Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: 🧰 Install dependencies
+        run: yarn
+
+      - name: ✅ Run tests
+        run: npx nx run phone-catalog-react:lint
