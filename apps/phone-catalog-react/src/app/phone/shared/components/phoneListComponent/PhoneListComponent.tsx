@@ -21,6 +21,10 @@ const letterSpacing = css`
   letter-spacing: 0.25px;
 `;
 
+const marginBottom = css`
+  margin-bottom: 1rem;
+`;
+
 export interface IPhoneListComponentProps {
   list: IPhone[];
   RowComponent?: ReactElement;
@@ -32,7 +36,7 @@ interface IPhoneTableRowProps extends Omit<IPhoneListComponentProps, 'list'> {
 
 const PhoneTableRow = ({ phone, RowComponent }: IPhoneTableRowProps) => {
   return (
-    <Col md={12}>
+    <Col md={12} cssOverrides={marginBottom}>
       <Card>
         <CardMedia
           src={`http://localhost:3333/${phone.imageFileName}`}

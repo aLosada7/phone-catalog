@@ -20,7 +20,6 @@ export const PhoneEditContainer = ({
   if (!phone && loading) return <div>Loading</div>;
 
   const handleSubmit = async (phone: IPhone) => {
-    console.log('phone', phone);
     const updatedPhone = await updatePhone(phone);
     if (updatedPhone) onSuccess(updatedPhone);
   };

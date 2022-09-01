@@ -4,9 +4,12 @@ import {
   Form,
   Row,
   Group,
+  Text,
   Textarea,
   TextInput,
   Title,
+  Label,
+  FormGroup,
 } from '@edene/components';
 import { IPhone } from '@phone-catalog/core';
 
@@ -19,14 +22,16 @@ interface IPhoneFormComponentProps {
 }
 
 export const PhoneFormComponent = (props: IPhoneFormComponentProps) => {
-  const { formData, onChange, onSubmit } = usePhoneForm(
+  const { formData, onChangeFile, onChange, onSubmit } = usePhoneForm(
     props.onSubmit,
     props.phone
   );
 
   return (
     <Form onSubmit={onSubmit}>
-      <Title mt={4}>Main data</Title>
+      <Title mt={4} mb={2}>
+        Main data
+      </Title>
       <Row>
         <Col md={12}>
           <TextInput
@@ -68,13 +73,19 @@ export const PhoneFormComponent = (props: IPhoneFormComponentProps) => {
         value={formData.description}
         onChange={onChange}
       ></Textarea>
-      <Title mt={4}>Specifications</Title>
-      <TextInput
-        name="imageFileName"
-        label="Image"
-        value={formData.imageFileName}
-        onChange={onChange}
-      />
+      <Title mt={4} mb={2}>
+        Specifications
+      </Title>
+      <FormGroup>
+        <Label text="Phone Image" /> <br />
+        {formData.imageFileName && (
+          <>
+            <Text>Actual image: {formData.imageFileName}</Text>
+            <Text mb={2}>Or upload a new one</Text>
+          </>
+        )}
+        <input type="file" name="imageToUpload" onChange={onChangeFile} />
+      </FormGroup>
       <Row>
         <Col md={8}>
           <TextInput

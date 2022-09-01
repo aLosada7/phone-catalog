@@ -1,3 +1,5 @@
+import { Alert } from '@edene/components';
+
 import { Loader } from '../../../../shared/components/loader';
 import { PhoneDetailComponent } from '../../components/phoneDetailComponent';
 import { usePhoneDetail } from '../../hooks/usePhoneDetail';
@@ -14,7 +16,7 @@ export const PhoneDetailContainer = ({ id }: IPhoneDetailContainerProps) => {
   }
 
   if (!phone || error) {
-    return <div>{error.message}</div>;
+    return <Alert>{error.message}</Alert>;
   }
 
   return <PhoneDetailComponent phone={phone}></PhoneDetailComponent>;

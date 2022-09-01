@@ -1,5 +1,5 @@
 import { IPhone } from '@phone-catalog/core';
-import { Col, Icon, Image, Row, Text } from '@edene/components';
+import { Group, Icon, Image, Row, Text } from '@edene/components';
 import { grays } from '@edene/foundations';
 
 interface IPhoneDetailComponentProps {
@@ -19,21 +19,32 @@ export const PhoneDetailComponent = ({ phone }: IPhoneDetailComponentProps) => {
       </Text>
       <Text size="sm">{phone.description}</Text>
       <Text>{phone.manufacturer}</Text>
-      <Row>
-        <Col md={12} hStack={2}>
-          <Icon variant="outlined" color={grays[5]}>
-            smartphone
-          </Icon>
-          <Text weight="bold">{phone.processor}</Text>
-          <Text color={grays[3]}>{phone.ram} GB RAM</Text>
-        </Col>
-        <Col md={12} hStack={2}>
-          <Icon variant="outlined" color={grays[5]}>
-            desktop_windows
-          </Icon>
-          <Text weight="bold">{phone.screen}</Text>
-        </Col>
-      </Row>
+      <Group>
+        <Icon variant="outlined" color={grays[5]}>
+          memory
+        </Icon>
+        <Text>{phone.processor}</Text>
+      </Group>
+      <Group>
+        <Icon variant="outlined" color={grays[5]}>
+          desktop_windows
+        </Icon>
+        <Text>{phone.screen}</Text>
+      </Group>
+      <Group>
+        <Icon variant="outlined" color={grays[5]}>
+          palette
+        </Icon>
+        <Text>{phone.color}</Text>
+      </Group>
+      <Group>
+        <Icon variant="outlined" color={grays[5]}>
+          smartphone
+        </Icon>
+        <Text>
+          {phone.ram} <b>GB RAM</b>
+        </Text>
+      </Group>
     </Row>
   );
 };

@@ -1,4 +1,4 @@
-import { Button, Title, Text, Stack } from '@edene/components';
+import { Button, Title, Text, Group } from '@edene/components';
 
 interface IPhoneDeleteComponentProps {
   onClick: () => void;
@@ -10,12 +10,12 @@ export const PhoneDeleteComponent = (props: IPhoneDeleteComponentProps) => {
     <>
       <Title>Delete phone</Title>
       <Text>Are you sure?</Text>
-      <Stack>
+      <Group>
         <Button variant="outline" onClick={props.onCancel}>
           Cancel
         </Button>
         <Button onClick={props.onClick}>Delete</Button>
-      </Stack>
+      </Group>
     </>
   );
 };
