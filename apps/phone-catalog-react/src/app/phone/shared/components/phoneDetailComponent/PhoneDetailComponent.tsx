@@ -17,7 +17,10 @@ export const PhoneDetailComponent = ({ phone }: IPhoneDetailComponentProps) => {
       <Text size="lg" weight="bolder" color={grays[1]}>
         {phone.name}
       </Text>
-      <Text size="sm">{phone.description}</Text>
+      <Text weight="bold">${phone.price}</Text>
+      <Text size="sm" color={grays[4]}>
+        {phone.description}
+      </Text>
       <Text>{phone.manufacturer}</Text>
       <Group>
         <Icon variant="outlined" color={grays[5]}>
@@ -41,9 +44,7 @@ export const PhoneDetailComponent = ({ phone }: IPhoneDetailComponentProps) => {
         <Icon variant="outlined" color={grays[5]}>
           smartphone
         </Icon>
-        <Text>
-          {phone.ram} <b>GB RAM</b>
-        </Text>
+        <Text>{phone.ram}GB RAM</Text>
       </Group>
     </Row>
   );
